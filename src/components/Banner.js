@@ -2,14 +2,32 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from '../assets/img/header-img.svg'
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function Banner() {
+    const {t, i18n: {changeLanguage, language}} = useTranslation();
+
+    const [currentLanguage, setCurrentLanguage] = useState(language);
+
+    const handleChangeLanguage = () => {
+        const newLanguage = currentLanguage === 'en' ? 'pt' : 'en'
+        changeLanguage(newLanguage)
+        setCurrentLanguage(newLanguage)
+    }
+    const en = 'en'
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [ "Desenvolvedor Web", "React", "Javascript"];
+
+    
+    const toRotate = [ ", Web Developer"];
+    console.log(currentLanguage.valueOf());
+    
+    
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 2000;
+    
+   
     useEffect(() => {
         let ticker = setInterval(() => {
             tick();
@@ -44,13 +62,14 @@ function Banner() {
         <Container >
             <Row classsName="align-items-center">
                 <Col xs={12} md={6} xl={7}>
-                    <span className="tagline">Bem vindo ao meu portfolio!</span>
-                    <h1>{`Olá eu sou Heitor Sanches `}<span className="wrap">{text}</span></h1>
-                    <p>Sou um estudante de ciências da computação no último semestre procurando
-                    oportunidade como desenvolvedor web
+                    <span className="tagline">{t('welcome')}</span>
+                    <h1>{`${t('me')}`}<span className="wrap">{text}</span></h1>
+                    <p>{t('presentation')}
                     </p>
-                    <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25}/>
+                    <button onClick={() => console.log('connect')}>{t('connect')} <ArrowRightCircle size={25}/>
+
                     </button>
+                    
                 </Col>
                 <Col xs={12} md={6} xl={5}>
                     <img src={headerImg} alt="Headder img"></img>

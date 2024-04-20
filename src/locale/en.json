@@ -1,0 +1,25 @@
+{
+    "translation":{
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "welcome": "Welcome to my Portfolio",
+        "presentation": "I´m a computer science student looking for an opportunity as a web developer",
+        "connect": "Let's connect",
+        "phone": "Phone",
+        "message": "Message",
+        "fill": "Fill all the fields",
+        "rights": "All Rights reserved",
+        "home": "Home",
+        "skills": "Skills",
+        "projects": "Projects",
+        
+        "lg": "pt-br",
+        "webdeveloment": " Web Development",
+        "agile": "Agile Methodology",
+        "me": "Hi I'm Heitor Sanches",
+        "developer": " a Web Developer",
+        "send": "Send",
+        "phrase": "Here are the projects currently finalised, documenting my evolution and showing my capacity as a developer. In projects of different scopes and formats.",
+        "mainSkills": "Main Skills"
+    }
+}

@@ -20,5 +20,5 @@ function App() {
     </div>
   );
 }
-
+document.title = 'Welcome to My Portfolio!';
 export default App;

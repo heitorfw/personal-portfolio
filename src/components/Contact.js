@@ -2,6 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg"
 import { useState } from "react";
 import emailjs from '@emailjs/browser'
+import { useTranslation } from "react-i18next";
 function Contact(){
     const [email, setEmail] = useState('');
     const [firstName, setFirstName] = useState('');
@@ -9,10 +10,23 @@ function Contact(){
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
    
+    
+    //tradução
+    const {t, i18n: {changeLanguage, language}} = useTranslation();
+
+    const [currentLanguage, setCurrentLanguage] = useState(language);
+
+    const handleChangeLanguage = () => {
+        const newLanguage = currentLanguage === 'en' ? 'pt' : 'en'
+        changeLanguage(newLanguage)
+        setCurrentLanguage(newLanguage)
+    }
+    
+    
     function SendEmail(e){
         e.preventDefault();
         if(email  === '' || firstName === '' || phone === '' || lastName === ''|| message === ''){
-                alert('Preencha todos os campos')
+                alert('Fill all the Fields')
                 return;
             }
         const templateParams ={
@@ -44,24 +58,24 @@ function Contact(){
                         <img src={contactImg} alt="Entre em Contato" />
                     </Col>
                     <Col md={6}>
-                        <h2>Entre em Contato</h2>
+                        <h2>{t('')}</h2>
                         <form onSubmit={SendEmail}>
                             <Row>
                                 <Col sm={6} className="px-1">
-                                    <input type="text" value={firstName} placeholder="Primeiro Nome" onChange={(e) => setFirstName( e.target.value)}/>
+                                    <input type="text" value={firstName} placeholder={t('firstName')} onChange={(e) => setFirstName( e.target.value)}/>
                                 </Col>
 
                                 <Col sm={6} className="px-1">
-                                <input type="text" value={lastName} placeholder="último Nome" onChange={(e) => setLastName( e.target.value)}/>
+                                <input type="text" value={lastName} placeholder={t('lastName')} onChange={(e) => setLastName( e.target.value)}/>
                                 </Col>
                                 <Col sm={6} className="px-1">
                                 <input type="email" value={email} placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
                                 </Col>
                                 <Col sm={6} className="px-1">
-                                <input type="tel" value={phone} placeholder="Telefone" onChange={(e) => setPhone(e.target.value)}/>
+                                <input type="tel" value={phone} placeholder={t('phone')} onChange={(e) => setPhone(e.target.value)}/>
                                 </Col>
-                                <textarea rows={6} value={message} placeholder="Mensagem" onChange={(e) => setMessage( e.target.value)}  />
-                                <button type="submit"><span>Enviar</span></button>
+                                <textarea rows={6} value={message} placeholder={t('message')} onChange={(e) => setMessage( e.target.value)}  />
+                                <button type="submit"><span>{t('send')}</span></button>
                                
                             </Row>
                         </form>

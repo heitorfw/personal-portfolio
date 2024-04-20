@@ -1,0 +1,29 @@
+{
+    "translation":{
+        "firstName": "Primeiro Nome",
+        
+        "lastName": "Último Nome",
+
+        "welcome": "Bem vindo ao meu portfolio!",
+
+        "presentation": "Sou um estudante de ciências da computação no último semestre procurando oportunidade como desenvolvedor web",
+
+        "connect": "Entre em contato",
+
+        "phone": "Telefone",
+        "message": "Mensagem",
+        "fill": "Preencha Todos os Campos",
+        "rights": "Todos os Direitos Reservados",
+        "home": "Home",
+        "skills": "Habilidades",
+        "projects": "Projetos",
+        "lg": "en-us",
+        "webdeveloment": " Desenvolvimento Web",
+        "agile": "Metodologia Ágil",
+        "me": "Olá eu sou Heitor Sanches",
+        "developer": "Desenvovedor Web",
+        "send": "Enviar",
+        "phrase": "Aqui estão os projetos atualmente finalizados, documentando minha evolução e mostrando minha capacidade como desenvolvedor. Em projetos de escopos e formatos diferentes.",
+        "mainSkills": "Principais Habilidades"
+    }
+}
