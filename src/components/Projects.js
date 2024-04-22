@@ -21,6 +21,12 @@ function Projects(){
     }
   const projects = [
     {
+      title: "Video Conference App",
+      description: " NextJs, TailwindCss",
+      imgUrl: projImg1,
+      link: 'https://zoom-app-xi.vercel.app',
+    },
+    {
       title: "Business Startup",
       description: "Design & Development",
       imgUrl: projImg1,
@@ -28,12 +34,7 @@ function Projects(){
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      imgUrl: projImg1,
     }
 ]
 return (
@@ -49,10 +50,10 @@ return (
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">React js</Nav.Link>
+                      <Nav.Link eventKey="first">Next js</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Next Js</Nav.Link>
+                      <Nav.Link eventKey="second">React Js</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="third">React Native</Nav.Link>
@@ -80,7 +81,7 @@ return (
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <p>Soon</p>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
