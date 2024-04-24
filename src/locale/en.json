@@ -20,6 +20,9 @@
         "developer": " a Web Developer",
         "send": "Send",
         "phrase": "Here are the projects currently finalised, documenting my evolution and showing my capacity as a developer. In projects of different scopes and formats.",
-        "mainSkills": "Main Skills"
+        "mainSkills": "Main Skills",
+        "soon": "Soon",
+        "coffee": "Coffee Shop App",
+        "video": "Video Conference App"
     }
 }
