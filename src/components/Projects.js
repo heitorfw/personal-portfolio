@@ -1,8 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import ProjectCards from "./ProjectCards";
 import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg2 from "../assets/img/BgBlack.png";
+import projImg3 from "../assets/img/coffee-code.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -21,21 +21,39 @@ function Projects(){
     }
   const projects = [
     {
-      title: "Video Conference App",
+      title: <a>{t('video')}</a>,
       description: " NextJs, TailwindCss",
       imgUrl: projImg1,
       link: 'https://zoom-app-xi.vercel.app',
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "",
+      description: <a>{t('soon')}</a>,
+      imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "",
+      description: <a>{t('soon')}</a>,
+      imgUrl: projImg2,
     }
+]
+const projectsReact = [
+  {
+    title: "Coffee Shop App",
+    description: "ReactJs, TailwindCss",
+    imgUrl: projImg3,
+    link: 'https://coffee-code-heitorfsw.netlify.app',
+  },
+  {
+    title: "",
+    description: <a>{t('soon')}</a>,
+    imgUrl: projImg2,
+  },
+  {
+    title: "",
+    description: <a>{t('soon')}</a>,
+    imgUrl: projImg2,
+  }
 ]
 return (
     <section className="project" id="projects">
@@ -78,10 +96,24 @@ return (
                       </div>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <div className="color-overlay">
+                        
+                        <Row>
+                          {
+                            projectsReact.map((projectsReact, index) => {
+                              return (
+                                <ProjectCards
+                                  key={index}
+                                  {...projectsReact}
+                                  />
+                              )
+                            })
+                          }
+                        </Row>
+                        </div>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Soon</p>
+                      <p>{t('soon')}</p>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
