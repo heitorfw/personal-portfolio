@@ -3,6 +3,7 @@ import ProjectCards from "./ProjectCards";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/BgBlack.png";
 import projImg3 from "../assets/img/coffee-code.png";
+import projImg4 from '../assets/img/filmeApp.png'
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -45,9 +46,9 @@ const projectsReact = [
     link: 'https://coffee-code-heitorfsw.netlify.app',
   },
   {
-    title: "",
-    description: <a>{t('soon')}</a>,
-    imgUrl: projImg2,
+    title: <a>{t('film')}</a>,
+    description: 'ReactJs, Sass, APIRest',
+    imgUrl: projImg4,
   },
   {
     title: "",
